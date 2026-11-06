@@ -1,0 +1,419 @@
+<!doctype html>
+<html lang="es-CO" class="scroll-smooth">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Nubo · Préstamos digitales en 3 minutos, 100 % online</title>
+  <meta name="description" content="Simula tu préstamo, solicítalo sin papeleo y recibe respuesta inmediata. Tasas transparentes, pagos con PSE, Nequi y DaviPlata. 100 % digital y seguro.">
+  <meta name="theme-color" content="#06100e">
+  <meta property="og:title" content="Nubo · Préstamos digitales en 3 minutos">
+  <meta property="og:description" content="Cero papeleo, aprobación automatizada y desembolso rápido. Sabes cuánto pagas antes de pedir.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script>
+    tailwind.config = { theme: { extend: {
+      fontFamily: { sans: ['"Plus Jakarta Sans"', 'Inter', 'system-ui', 'sans-serif'] },
+      colors: { ink: { 950: '#05100d', 900: '#08150f', 800: '#0d1f19', 700: '#142c24', 600: '#1d3b31' }, mint: { 400: '#2ee6a6', 500: '#14c98a' }, cyan2: '#22d3ee' }
+    } } };
+  </script>
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FinancialService","name":"Nubo","description":"Préstamos digitales 100 % online con respuesta inmediata.","areaServed":"CO","url":"/"}
+  </script>
+</head>
+<body class="bg-ink-950 text-slate-200 font-sans antialiased">
+<a href="#simulador" class="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[100] focus:bg-mint-400 focus:text-ink-950 focus:px-3 focus:py-2 focus:rounded-lg">Saltar al contenido</a>
+<div class="bg-glow" aria-hidden="true"></div>
+
+<!-- ============ HEADER ============ -->
+<header id="site-header" class="fixed top-0 inset-x-0 z-50 transition">
+  <div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
+    <a href="#" class="flex items-center gap-2 font-extrabold text-xl text-white" aria-label="Nubo, inicio">
+      <span class="logo-mark" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#05100d" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 16l6-6 4 4 6-8"/></svg></span>nubo
+    </a>
+    <nav class="hidden md:flex items-center gap-7 text-sm font-medium text-slate-300" aria-label="Principal">
+      <a href="#simulador" class="hover:text-white">Simulador</a>
+      <a href="#como-funciona" class="hover:text-white">Cómo funciona</a>
+      <a href="#pagos" class="hover:text-white">Centro de pagos</a>
+      <a href="#faq" class="hover:text-white">Preguntas</a>
+    </nav>
+    <div class="flex items-center gap-2">
+      <span id="session-chip" class="hidden sm:inline-flex pill pill-ok" hidden>Hola, <b id="session-name" class="ml-1"></b></span>
+      <a href="#pagos" class="hidden sm:inline-flex btn btn-ghost btn-sm">Pagar cuota</a>
+      <a href="#solicitud" class="btn btn-primary btn-sm">Pedir préstamo</a>
+      <button id="menu-btn" class="md:hidden icon-btn" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+  <nav id="mobile-menu" class="md:hidden px-4 pb-4 grid gap-1 bg-ink-900/95 backdrop-blur border-b border-white/5" hidden aria-label="Móvil">
+    <a href="#simulador" class="menu-link">Simulador</a><a href="#como-funciona" class="menu-link">Cómo funciona</a>
+    <a href="#pagos" class="menu-link">Centro de pagos</a><a href="#faq" class="menu-link">Preguntas frecuentes</a>
+  </nav>
+</header>
+
+<main>
+<!-- ============ HERO + SIMULADOR ============ -->
+<section id="simulador" class="pt-28 pb-16 md:pt-36 md:pb-24">
+  <div class="max-w-6xl mx-auto px-4 grid lg:grid-cols-2 gap-10 lg:gap-14 items-center">
+    <div class="reveal">
+      <span class="pill pill-ok mb-5"><span class="dot-live"></span> Respuesta inmediata · 24/7</span>
+      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-[1.05] tracking-tight text-white">
+        Tu dinero, <span class="grad-text">sin filas ni papeleo.</span>
+      </h1>
+      <p class="mt-5 text-lg text-slate-300 max-w-xl">
+        Elige cuánto necesitas y en cuánto tiempo lo pagas. Ves el costo exacto <b class="text-white">antes</b> de pedir, apruebas desde el celular y recibes el desembolso en minutos.
+      </p>
+      <ul class="mt-7 grid sm:grid-cols-3 gap-3 text-sm">
+        <li class="vp"><span class="vp-i">📄</span><b>Cero papeleo</b><span>Solo tu cédula y tu celular.</span></li>
+        <li class="vp"><span class="vp-i">⚡</span><b>Aprobación automática</b><span>Sin esperar días por un asesor.</span></li>
+        <li class="vp"><span class="vp-i">🏦</span><b>Desembolso rápido</b><span>A tu cuenta o billetera.</span></li>
+      </ul>
+      <div class="mt-7 flex flex-wrap items-center gap-x-5 gap-y-2 text-xs text-slate-400">
+        <span class="trust"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#2ee6a6" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 018 0v4"/></svg> Conexión cifrada SSL/TLS</span>
+        <span class="trust"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#2ee6a6" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6l8-3z"/><path d="M9 12l2 2 4-4"/></svg> Habeas Data · Ley 1581</span>
+        <span class="trust">★ 4,8/5 · +120.000 clientes <i class="text-slate-500">(dato demo)</i></span>
+      </div>
+    </div>
+
+    <!-- Simulador -->
+    <div class="reveal" style="transition-delay:.1s">
+      <div class="card glass p-5 sm:p-7" role="group" aria-labelledby="sim-title">
+        <div class="flex items-center justify-between mb-5">
+          <h2 id="sim-title" class="font-bold text-white">Simula tu préstamo</h2>
+          <span class="text-xs text-slate-400">Sin compromiso</span>
+        </div>
+
+        <div class="flex items-end justify-between">
+          <label for="sim-amount" class="lbl">¿Cuánto necesitas?</label>
+          <output id="out-amount" for="sim-amount" class="text-3xl sm:text-4xl font-extrabold text-white tabular-nums" data-v="0">$500.000</output>
+        </div>
+        <input id="sim-amount" type="range" class="range mt-3" aria-label="Monto del préstamo">
+        <div class="flex justify-between text-xs text-slate-500 mt-1"><span id="min-amount"></span><span id="max-amount"></span></div>
+
+        <div class="flex items-end justify-between mt-6">
+          <label for="sim-days" class="lbl">¿En cuánto tiempo pagas?</label>
+          <div class="text-right"><output id="out-days" for="sim-days" class="text-2xl font-extrabold text-white">30 días</output><p id="out-months" class="text-xs text-slate-400"></p></div>
+        </div>
+        <input id="sim-days" type="range" class="range mt-3" aria-label="Plazo en días">
+        <div class="flex flex-wrap gap-2 mt-3" role="group" aria-label="Plazos rápidos">
+          <button type="button" class="chip sm term-chip" data-days="15" aria-pressed="false">15 días</button>
+          <button type="button" class="chip sm term-chip" data-days="30" aria-pressed="true">30 días</button>
+          <button type="button" class="chip sm term-chip" data-days="60" aria-pressed="false">2 meses</button>
+          <button type="button" class="chip sm term-chip" data-days="90" aria-pressed="false">3 meses</button>
+        </div>
+
+        <dl class="breakdown mt-6" aria-live="polite">
+          <div><dt>Capital solicitado</dt><dd id="bk-capital" data-v="0"></dd></div>
+          <div><dt>Interés <span id="bk-rate" class="text-slate-500"></span></dt><dd id="bk-interest" data-v="0"></dd></div>
+          <div><dt>Tarifa de servicio <span class="text-slate-500">(IVA incl.)</span></dt><dd id="bk-fee" data-v="0"></dd></div>
+          <div><dt>Fecha de pago</dt><dd id="bk-due"></dd></div>
+          <div class="total"><dt>Total a pagar</dt><dd id="bk-total" data-v="0"></dd></div>
+        </dl>
+
+        <button id="sim-cta" type="button" class="btn btn-primary btn-lg w-full mt-5 pulse-ring">Solicitar mi préstamo en 3 minutos <span aria-hidden="true">→</span></button>
+        <p class="text-[11px] text-slate-500 mt-3 text-center leading-snug">Simulación ilustrativa. El valor final depende del estudio de crédito. Sin cobros por consultar.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CÓMO FUNCIONA ============ -->
+<section id="como-funciona" class="py-16 md:py-20 border-y border-white/5 bg-ink-900/60">
+  <div class="max-w-6xl mx-auto px-4">
+    <div class="text-center max-w-2xl mx-auto reveal">
+      <h2 class="h2">Del “lo necesito” al “ya lo tengo” en 3 pasos</h2>
+      <p class="mt-3 text-slate-400">Diseñado para el celular. Sin descargar apps, sin ir a una oficina, sin codeudores.</p>
+    </div>
+    <ol class="mt-10 grid md:grid-cols-3 gap-5">
+      <li class="card p-6 reveal"><span class="num">1</span><h3 class="font-bold text-white mt-4">Cuéntanos quién eres</h3><p class="mt-2 text-sm text-slate-400">Datos básicos y verificación de tu celular por SMS. Dos minutos, máximo.</p></li>
+      <li class="card p-6 reveal" style="transition-delay:.08s"><span class="num">2</span><h3 class="font-bold text-white mt-4">Verifica tu identidad</h3><p class="mt-2 text-sm text-slate-400">Foto de tu cédula y una selfie. Nuestra validación automática hace el resto.</p></li>
+      <li class="card p-6 reveal" style="transition-delay:.16s"><span class="num">3</span><h3 class="font-bold text-white mt-4">Recibe tu oferta</h3><p class="mt-2 text-sm text-slate-400">Respuesta inmediata con términos claros. Aceptas y te desembolsamos.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============ SOLICITUD (WIZARD) ============ -->
+<section id="solicitud" class="py-16 md:py-24 scroll-mt-16">
+  <div class="max-w-2xl mx-auto px-4">
+    <div class="text-center reveal">
+      <h2 class="h2">Solicita tu préstamo</h2>
+      <p class="mt-3 text-slate-400">Tu oferta: <b id="wiz-sum" class="text-mint-400"></b></p>
+    </div>
+
+    <div class="card glass mt-8 p-5 sm:p-8 reveal">
+      <!-- Formulario -->
+      <form id="wiz-form" novalidate autocomplete="on">
+        <div class="stepper" aria-label="Progreso de la solicitud">
+          <div class="bar"><i id="wiz-bar"></i></div>
+          <div class="step-dot active" data-step="1"><b>1</b><span>Tus datos</span></div>
+          <div class="step-dot" data-step="2"><b>2</b><span>Perfil</span></div>
+          <div class="step-dot" data-step="3"><b>3</b><span>Identidad</span></div>
+        </div>
+
+        <!-- Paso 1 -->
+        <fieldset class="wiz-panel" data-step="1">
+          <legend class="panel-t">Datos básicos y contacto</legend>
+          <div class="grid gap-4">
+            <div class="field"><label class="lbl" for="f-name">Nombre completo (como aparece en tu cédula)</label><input id="f-name" class="inp" autocomplete="name" placeholder="María Fernanda Gómez"></div>
+            <div class="grid grid-cols-[110px_1fr] gap-3">
+              <div class="field"><label class="lbl" for="f-doctype">Tipo</label><select id="f-doctype" class="inp"><option>C.C.</option><option>C.E.</option></select></div>
+              <div class="field"><label class="lbl" for="f-doc">Número de documento</label><input id="f-doc" class="inp" inputmode="numeric" maxlength="10" placeholder="1020304050"></div>
+            </div>
+            <div class="field"><label class="lbl" for="f-birth">Fecha de nacimiento</label><input id="f-birth" type="date" class="inp"></div>
+            <div class="field"><label class="lbl" for="f-email">Correo electrónico</label><input id="f-email" type="email" class="inp" autocomplete="email" placeholder="tu@correo.com"></div>
+            <div class="field">
+              <label class="lbl" for="f-phone">Celular</label>
+              <div class="flex gap-2">
+                <span class="inp w-16 flex items-center justify-center text-slate-400 shrink-0">+57</span>
+                <input id="f-phone" class="inp" inputmode="numeric" maxlength="10" autocomplete="tel-national" placeholder="3001234567">
+                <button type="button" id="otp-send" class="btn btn-ghost shrink-0">Enviar código</button>
+              </div>
+              <p id="otp-status" class="text-sm text-mint-400 mt-2" hidden>✓ Celular verificado</p>
+            </div>
+            <div id="otp-box" class="field" hidden>
+              <label class="lbl" for="f-otp">Código de 6 dígitos</label>
+              <div class="flex gap-2"><input id="f-otp" class="inp tracking-[.4em] text-center font-bold" inputmode="numeric" maxlength="6" autocomplete="one-time-code" placeholder="••••••"><button type="button" id="otp-verify" class="btn btn-ghost shrink-0">Verificar</button></div>
+              <p id="otp-hint" class="text-xs text-cyan2 mt-2"></p>
+            </div>
+            <div class="field">
+              <label class="flex gap-3 text-sm text-slate-300 cursor-pointer"><input id="f-consent" type="checkbox" class="check mt-0.5"><span>Autorizo el tratamiento de mis datos personales, la consulta en centrales de riesgo y acepto los <a href="#" class="underline text-mint-400">Términos</a> y la <a href="#" class="underline text-mint-400">Política de privacidad</a>.</span></label>
+            </div>
+          </div>
+        </fieldset>
+
+        <!-- Paso 2 -->
+        <fieldset class="wiz-panel" data-step="2" hidden>
+          <legend class="panel-t">Perfil financiero y destino</legend>
+          <p class="lbl mb-2">¿Cuáles son tus ingresos mensuales?</p>
+          <div class="chip-group" data-field="income" role="group" aria-label="Ingresos mensuales">
+            <button type="button" class="chip" data-value="lt1" aria-pressed="false">Menos de $1.000.000</button>
+            <button type="button" class="chip" data-value="1to2" aria-pressed="false">$1M – $2M</button>
+            <button type="button" class="chip" data-value="2to4" aria-pressed="false">$2M – $4M</button>
+            <button type="button" class="chip" data-value="gt4" aria-pressed="false">Más de $4M</button>
+          </div>
+          <p class="lbl mt-6 mb-2">¿Cuál es tu situación laboral?</p>
+          <div class="chip-group" data-field="job" role="group" aria-label="Situación laboral">
+            <button type="button" class="chip" data-value="employee" aria-pressed="false">💼 Empleado</button>
+            <button type="button" class="chip" data-value="independent" aria-pressed="false">🛠️ Independiente</button>
+            <button type="button" class="chip" data-value="business" aria-pressed="false">🏪 Negocio propio</button>
+            <button type="button" class="chip" data-value="pension" aria-pressed="false">🌿 Pensionado</button>
+          </div>
+          <p class="lbl mt-6 mb-2">¿Para qué usarás el dinero?</p>
+          <div class="chip-group" data-field="purpose" role="group" aria-label="Destino del crédito">
+            <button type="button" class="chip" data-value="emergency" aria-pressed="false">🚑 Imprevisto</button>
+            <button type="button" class="chip" data-value="business" aria-pressed="false">📦 Mi negocio</button>
+            <button type="button" class="chip" data-value="debts" aria-pressed="false">🧾 Pagar deudas</button>
+            <button type="button" class="chip" data-value="education" aria-pressed="false">🎓 Estudios</button>
+            <button type="button" class="chip" data-value="home" aria-pressed="false">🏠 Hogar</button>
+            <button type="button" class="chip" data-value="other" aria-pressed="false">✨ Otro</button>
+          </div>
+        </fieldset>
+
+        <!-- Paso 3 -->
+        <fieldset class="wiz-panel" data-step="3" hidden>
+          <legend class="panel-t">Verificación de identidad</legend>
+          <div class="grid sm:grid-cols-2 gap-4">
+            <label class="dropzone"><input id="f-front" type="file" accept="image/*" capture="environment" class="sr-only"><div id="pv-front" class="dz-preview dz-p"></div><span class="dz-ico">📷</span><b>Frente del documento</b><span class="dz-name">Toca o arrastra la foto</span></label>
+            <label class="dropzone"><input id="f-back" type="file" accept="image/*" capture="environment" class="sr-only"><div id="pv-back" class="dz-preview dz-p"></div><span class="dz-ico">🔄</span><b>Dorso del documento</b><span class="dz-name">Toca o arrastra la foto</span></label>
+          </div>
+          <div class="bio mt-5">
+            <div id="bio-ring" class="bio-ring" aria-hidden="true"><svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg></div>
+            <div class="grow"><b class="text-white">Validación biométrica</b><p id="bio-status" class="text-sm text-slate-400" aria-live="polite">Necesitaremos tu cámara o una selfie.</p></div>
+            <button type="button" id="bio-start" class="btn btn-ghost btn-sm">Iniciar verificación facial</button>
+          </div>
+          <p class="text-xs text-slate-500 mt-4">🔒 Demo: las imágenes se muestran solo en tu navegador y no se envían a ningún servidor.</p>
+        </fieldset>
+
+        <div class="flex gap-3 mt-8">
+          <button type="button" id="wiz-prev" class="btn btn-ghost" hidden>← Atrás</button>
+          <button type="button" id="wiz-next" class="btn btn-primary btn-lg grow"><span id="wiz-next-label">Continuar</span> <span aria-hidden="true">→</span></button>
+        </div>
+      </form>
+
+      <!-- Análisis -->
+      <div id="wiz-analyzing" class="py-8 text-center" hidden aria-live="polite">
+        <div class="radar" aria-hidden="true"><i></i><i></i><i></i></div>
+        <h3 class="text-xl font-bold text-white mt-6">Analizando perfil de riesgo…</h3>
+        <p class="text-sm text-slate-400 mt-1">Esto toma unos segundos. No cierres esta ventana.</p>
+        <div class="progress mt-6"><i id="an-bar"></i></div>
+        <ul id="an-list" class="an-list"></ul>
+      </div>
+
+      <!-- Resultado -->
+      <div id="wiz-result" class="relative text-center py-4" hidden>
+        <div id="confetti" class="confetti" aria-hidden="true"></div>
+        <div class="check-big" aria-hidden="true"><svg viewBox="0 0 24 24" width="34" height="34" fill="none" stroke="#05100d" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></div>
+        <p class="text-mint-400 font-semibold mt-5">¡Aprobado, <span id="res-name"></span>!</p>
+        <p id="res-amount" class="text-5xl sm:text-6xl font-extrabold text-white tabular-nums mt-1" data-v="0">$0</p>
+        <p class="text-slate-400 text-sm mt-1">listos para desembolsar · Crédito <b id="res-id" class="text-slate-200"></b></p>
+        <dl class="breakdown text-left mt-6">
+          <div><dt>Plazo</dt><dd id="res-days"></dd></div>
+          <div><dt>Tasa</dt><dd id="res-rate"></dd></div>
+          <div><dt>Fecha de pago</dt><dd id="res-due"></dd></div>
+          <div class="total"><dt>Total a pagar</dt><dd id="res-total"></dd></div>
+        </dl>
+        <p id="res-note" class="text-sm text-slate-400 mt-4"></p>
+        <div class="grid sm:grid-cols-2 gap-3 mt-6">
+          <button type="button" id="res-pay" class="btn btn-primary btn-lg">Ver mi crédito y pagar</button>
+          <button type="button" id="res-restart" class="btn btn-ghost btn-lg">Nueva simulación</button>
+        </div>
+        <p class="text-[11px] text-slate-500 mt-4">Demostración: no se realiza ningún desembolso ni se genera deuda real.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CENTRO DE PAGOS ============ -->
+<section id="pagos" class="py-16 md:py-24 border-t border-white/5 bg-ink-900/60 scroll-mt-16">
+  <div class="max-w-6xl mx-auto px-4">
+    <div class="text-center max-w-2xl mx-auto reveal">
+      <h2 class="h2">Centro de pagos: tú tienes el control</h2>
+      <p class="mt-3 text-slate-400">Paga tu cuota en segundos, a cualquier hora. Con tu cédula o la referencia de tu crédito.</p>
+    </div>
+
+    <div class="grid lg:grid-cols-5 gap-6 mt-10">
+      <!-- Pago rápido + métodos -->
+      <div class="lg:col-span-2 grid gap-6 content-start">
+        <form id="quick-form" class="card glass p-5 sm:p-6 reveal">
+          <h3 class="font-bold text-white flex items-center gap-2">⚡ Pago rápido</h3>
+          <label for="quick-id" class="lbl mt-4 block">Cédula o referencia del crédito</label>
+          <input id="quick-id" class="inp mt-1" placeholder="1000000001 · NB-48213" autocomplete="off">
+          <button id="quick-btn" type="submit" class="btn btn-primary btn-lg w-full mt-4"><span id="quick-label">Pagar ahora</span></button>
+          <button id="quick-demo" type="button" class="text-xs text-cyan2 underline mt-3">Probar con cuenta demo (cédula 1000000001)</button>
+        </form>
+
+        <div class="card p-5 sm:p-6 reveal">
+          <h3 class="font-bold text-white">Elige cómo pagar</h3>
+          <div class="grid grid-cols-2 gap-3 mt-4" role="group" aria-label="Métodos de pago">
+            <button class="method" data-method="pse" aria-pressed="false"><span class="m-logo" style="--c:#0a6cff">PSE</span><b>PSE</b><small>Tu banco</small></button>
+            <button class="method" data-method="nequi" aria-pressed="false"><span class="m-logo" style="--c:#c4007c">N</span><b>Nequi</b><small>Desde la app</small></button>
+            <button class="method" data-method="daviplata" aria-pressed="false"><span class="m-logo" style="--c:#e30613">D</span><b>DaviPlata</b><small>Desde la app</small></button>
+            <button class="method" data-method="card" aria-pressed="false"><span class="m-logo" style="--c:#475569">💳</span><b>Tarjeta</b><small>Débito / crédito</small></button>
+            <button class="method col-span-2" data-method="global" aria-pressed="false"><span class="m-logo" style="--c:#0ea5a4">🌐</span><b>Pasarela global</b><small>Apple Pay · Google Pay · PayPal</small></button>
+          </div>
+          <p class="text-xs text-slate-500 mt-4 flex items-center gap-1.5">🔒 Pagos cifrados · Nunca almacenamos datos de tu tarjeta</p>
+        </div>
+      </div>
+
+      <!-- Estado de cuenta -->
+      <div class="lg:col-span-3 card glass p-5 sm:p-7 reveal" aria-live="polite">
+        <div id="acc-empty" class="h-full min-h-[320px] grid place-items-center text-center">
+          <div><div class="text-5xl">🧾</div><h3 class="font-bold text-white mt-3">Tu estado de cuenta aparecerá aquí</h3><p class="text-sm text-slate-400 mt-1 max-w-xs mx-auto">Ingresa tu cédula en “Pago rápido” para ver saldo, cuotas y comprobantes en tiempo real.</p></div>
+        </div>
+
+        <div id="acc-panel" hidden>
+          <div class="flex flex-wrap items-start justify-between gap-3">
+            <div><p id="acc-name" class="text-lg font-bold text-white"></p><p id="acc-ref" class="text-sm text-slate-400"></p></div>
+            <div class="flex items-center gap-2"><span class="text-xs text-slate-500 flex items-center gap-1.5"><span class="dot-live"></span><span id="acc-sync">Actualizado ahora</span></span>
+              <button id="acc-refresh" class="icon-btn" aria-label="Actualizar"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 11-3-6.7L21 8"/><path d="M21 3v5h-5"/></svg></button>
+              <button id="acc-logout" class="text-xs text-slate-400 underline">Salir</button></div>
+          </div>
+
+          <div class="mt-5 grid sm:grid-cols-2 gap-4">
+            <div class="stat"><p class="text-xs text-slate-400">Saldo pendiente</p><p id="acc-balance" class="text-3xl font-extrabold text-white tabular-nums" data-v="0">$0</p><span id="acc-next" class="pill pill-ok mt-2"></span></div>
+            <div class="stat"><p class="text-xs text-slate-400">Progreso del crédito</p><div class="progress mt-3"><i id="acc-progress"></i></div><p id="acc-progress-txt" class="text-sm text-slate-300 mt-2"></p></div>
+          </div>
+
+          <div class="mt-6 grid md:grid-cols-2 gap-6">
+            <div><h4 class="sub-t">Cuotas</h4><ul id="acc-installments" class="grid gap-2 mt-2"></ul></div>
+            <div><h4 class="sub-t">Últimos pagos</h4><ul id="acc-history" class="grid gap-2 mt-2"></ul></div>
+          </div>
+
+          <div class="paybox mt-6">
+            <div class="flex gap-2 mb-3" role="group" aria-label="¿Qué quieres pagar?">
+              <button class="mode-btn" data-mode="cuota" aria-pressed="true">Cuota vigente</button>
+              <button id="mode-total" class="mode-btn" data-mode="total" aria-pressed="false">Pagar todo</button>
+            </div>
+            <div class="flex items-end justify-between"><span class="text-sm text-slate-400">Valor a pagar</span><span id="pay-amount" class="text-3xl font-extrabold text-white tabular-nums">$0</span></div>
+            <button id="pay-now" class="btn btn-primary btn-lg w-full mt-4" disabled><span id="pay-now-label">Elige un método de pago</span></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section id="faq" class="py-16 md:py-24 scroll-mt-16">
+  <div class="max-w-3xl mx-auto px-4">
+    <div class="text-center reveal"><h2 class="h2">Preguntas frecuentes</h2><p class="mt-3 text-slate-400">Claridad total, antes de que firmes nada.</p></div>
+    <div class="mt-10 grid gap-3 reveal">
+      <div class="faq-item"><button aria-expanded="false"><span>¿Qué requisitos necesito?</span><i aria-hidden="true"></i></button><div class="faq-panel"><p>Ser mayor de 18 años, tener cédula de ciudadanía o extranjería vigente, un celular a tu nombre y una cuenta bancaria o billetera digital (Nequi, DaviPlata) para recibir el desembolso. No pedimos codeudor, certificados laborales ni desplazamientos.</p></div></div>
+      <div class="faq-item"><button aria-expanded="false"><span>¿Cuánto cuesta realmente el préstamo?</span><i aria-hidden="true"></i></button><div class="faq-panel"><p>El costo se compone de interés remuneratorio (1,9 % mensual en esta demo), una tarifa de servicio y el IVA sobre esa tarifa. El simulador te muestra cada rubro y el total exacto antes de que decidas. No hay cobros por estudio ni por consultar.</p></div></div>
+      <div class="faq-item"><button aria-expanded="false"><span>¿Qué pasa si me atraso en un pago?</span><i aria-hidden="true"></i></button><div class="faq-panel"><p>Se cobra un recargo diario de mora sobre el valor vencido, dentro de los límites de la ley, y el incumplimiento puede reportarse a centrales de riesgo luego de la notificación previa. Si prevés un retraso, escríbenos antes: podemos ayudarte a reprogramar.</p></div></div>
+      <div class="faq-item"><button aria-expanded="false"><span>¿Cómo puedo pagar mi cuota?</span><i aria-hidden="true"></i></button><div class="faq-panel"><p>Desde el Centro de pagos con PSE, Nequi, DaviPlata, tarjeta débito/crédito o pasarelas globales. Solo ingresa tu cédula o referencia: el pago se refleja al instante y recibes tu comprobante.</p></div></div>
+      <div class="faq-item"><button aria-expanded="false"><span>¿Puedo pagar antes de la fecha?</span><i aria-hidden="true"></i></button><div class="faq-panel"><p>Sí, cuando quieras y sin penalización. Con la opción “Pagar todo” liquidas el saldo y dejas de generar intereses futuros.</p></div></div>
+      <div class="faq-item"><button aria-expanded="false"><span>¿Mis datos están seguros?</span><i aria-hidden="true"></i></button><div class="faq-panel"><p>Tu información viaja cifrada y se trata conforme a la Ley 1581 de 2012 (Habeas Data). Nunca te pediremos claves, PIN ni códigos por chat o llamada. Puedes ejercer tus derechos de acceso, rectificación y supresión en cualquier momento.</p></div></div>
+      <div class="faq-item"><button aria-expanded="false"><span>¿En cuánto tiempo recibo el dinero?</span><i aria-hidden="true"></i></button><div class="faq-panel"><p>La solicitud toma cerca de 3 minutos y la respuesta es inmediata. Si tu crédito es aprobado y aceptas, el desembolso se realiza en minutos, todos los días.</p></div></div>
+    </div>
+    <div class="mt-8 text-center reveal"><p class="text-slate-400 text-sm">¿Sigues con dudas?</p><a data-wa class="btn btn-wa mt-3" href="#">Escríbenos por WhatsApp</a></div>
+  </div>
+</section>
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="border-t border-white/5 bg-ink-900 pt-12 pb-28">
+  <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-3 gap-8 text-sm text-slate-400">
+    <div><p class="font-extrabold text-xl text-white">nubo</p><p class="mt-2">Crédito digital simple, transparente y humano.</p>
+      <div class="flex flex-wrap gap-2 mt-4"><span class="seal">🔒 SSL 256-bit</span><span class="seal">🛡️ Habeas Data</span><span class="seal">✅ PCI-DSS (pasarela)</span></div></div>
+    <div><p class="font-semibold text-white mb-2">Enlaces</p><ul class="grid gap-1"><li><a href="#simulador" class="hover:text-white">Simulador</a></li><li><a href="#pagos" class="hover:text-white">Pagar mi cuota</a></li><li><a href="#faq" class="hover:text-white">Preguntas frecuentes</a></li><li><a href="#" class="hover:text-white">Términos y condiciones</a></li><li><a href="#" class="hover:text-white">Política de privacidad</a></li></ul></div>
+    <div><p class="font-semibold text-white mb-2">Aviso legal</p><p class="text-xs leading-relaxed">Sitio de demostración. Las tasas, montos, comprobantes y aprobaciones son simulados y no constituyen oferta de crédito. Antes de operar en producción, incluye tu razón social, NIT, tasa máxima legal vigente, canales de PQR y la información exigida por la regulación aplicable. Préstamos sujetos a estudio de crédito. Pagar a tiempo mejora tu historial.</p></div>
+  </div>
+  <p class="max-w-6xl mx-auto px-4 mt-10 text-xs text-slate-600">© <span id="year"></span> Nubo. Todos los derechos reservados.</p>
+</footer>
+
+<!-- ============ MODAL DE PAGO ============ -->
+<div id="pay-modal" class="modal" hidden role="dialog" aria-modal="true" aria-labelledby="pm-title">
+  <div class="modal-bg" data-close-modal></div>
+  <div class="modal-card">
+    <div id="pm-form">
+      <div class="flex items-start justify-between"><div><h3 id="pm-title" class="text-lg font-bold text-white"></h3><p class="text-sm text-slate-400">Total: <b id="pm-amount" class="text-white"></b></p></div><button class="icon-btn" data-close-modal aria-label="Cerrar">✕</button></div>
+      <div id="pm-body" class="grid gap-4 mt-5"></div>
+      <button id="pm-confirm" class="btn btn-primary btn-lg w-full mt-6">Confirmar pago</button>
+      <p class="text-[11px] text-slate-500 text-center mt-3">Entorno de demostración · no se realiza ningún cobro real.</p>
+    </div>
+    <div id="pm-proc" class="text-center py-10" hidden><div class="spinner" aria-hidden="true"></div><p class="mt-5 font-semibold text-white">Procesando tu pago…</p><p class="text-sm text-slate-400">Comunicándonos con la pasarela cifrada</p></div>
+    <div id="pm-ok" class="text-center py-4" hidden>
+      <div class="check-big" aria-hidden="true"><svg viewBox="0 0 24 24" width="34" height="34" fill="none" stroke="#05100d" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></div>
+      <h3 class="text-xl font-bold text-white mt-4">¡Pago exitoso!</h3>
+      <dl class="breakdown text-left mt-5"><div><dt>Valor</dt><dd id="rc-amount"></dd></div><div><dt>Método</dt><dd id="rc-method"></dd></div><div><dt>Fecha</dt><dd id="rc-date"></dd></div><div class="total"><dt>Comprobante</dt><dd id="rc-id"></dd></div></dl>
+      <button class="btn btn-primary btn-lg w-full mt-6" data-close-modal>Listo</button>
+    </div>
+  </div>
+</div>
+
+<!-- ============ FLOTANTES: CHATBOT + WHATSAPP ============ -->
+<div class="fixed right-4 bottom-4 z-40 flex flex-col items-end gap-3" style="padding-bottom:env(safe-area-inset-bottom)">
+  <section id="chat-window" class="chat" hidden aria-label="Asistente virtual">
+    <header class="chat-h"><div class="flex items-center gap-3"><span class="bot-av" aria-hidden="true">🤖</span><div><b class="text-white">Nubi · asistente 24/7</b><p class="text-xs text-mint-400 flex items-center gap-1.5"><span class="dot-live"></span> En línea</p></div></div><button id="chat-close" class="icon-btn" aria-label="Cerrar chat">✕</button></header>
+    <div id="chat-log" class="chat-log" role="log" aria-live="polite"></div>
+    <div id="chat-quick" class="px-3 pb-2 flex flex-wrap gap-2"></div>
+    <form id="chat-form" class="chat-f"><input id="chat-input" class="inp" placeholder="Escribe tu duda…" autocomplete="off" aria-label="Mensaje"><button class="btn btn-primary" aria-label="Enviar">➤</button></form>
+    <button id="chat-human" type="button" class="chat-human">¿Prefieres hablar con una persona? →</button>
+  </section>
+  <div class="flex items-center gap-3">
+    <button id="chat-toggle" class="fab fab-chat" aria-label="Abrir asistente virtual" aria-expanded="false" aria-controls="chat-window"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 01-11.6 7.1L4 20l1-4.6A8 8 0 1121 12z"/></svg><i id="chat-dot" class="fab-dot" hidden></i></button>
+    <a data-wa class="fab fab-wa" href="#" aria-label="Escribir por WhatsApp"><svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 00-8.6 15.1L2 22l5-1.3A10 10 0 1012 2zm0 18.2c-1.5 0-3-.4-4.2-1.200l-.3-.2-3 .8.8-2.900-.2-.3A8.200 8.200 0 1112 20.200zm4.500-6.100c-.2-.1-1.500-.7-1.700-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.200-.3.200-.5.100a6.700 6.700 0 01-3.300-2.900c-.2-.4.200-.4.700-1.300.1-.2 0-.3 0-.4l-.8-1.800c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.100-.7.300-.7.700-1 1.500-.9 2.400.2 1.100.7 2.100 1.400 3 1.200 1.700 2.800 3 4.700 3.700 1.400.5 2 .4 2.600.3.700-.1 1.600-.7 1.800-1.300.2-.6.200-1.200.1-1.300-.1-.1-.3-.2-.5-.3z"/></svg></a>
+  </div>
+</div>
+
+<div id="toasts" class="toasts" aria-live="polite"></div>
+
+<noscript><p style="position:fixed;bottom:0;left:0;right:0;background:#f59e0b;color:#000;padding:12px;text-align:center;z-index:200">Activa JavaScript para usar el simulador y la solicitud.</p></noscript>
+
+<script src="assets/js/config.js"></script>
+<script src="assets/js/utils.js"></script>
+<script src="assets/js/api.js"></script>
+<script src="assets/js/simulator.js"></script>
+<script src="assets/js/wizard.js"></script>
+<script src="assets/js/payments.js"></script>
+<script src="assets/js/faq.js"></script>
+<script src="assets/js/chatbot.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
